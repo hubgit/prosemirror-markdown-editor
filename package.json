@@ -1,6 +1,6 @@
 {
   "name": "@aeaton/prosemirror-markdown-editor",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/prosemirror-markdown-editor.js",
   "license": "MIT",
   "files": [
