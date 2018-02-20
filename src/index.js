@@ -1,7 +1,7 @@
-import {exampleSetup} from 'prosemirror-example-setup'
-import {schema, defaultMarkdownParser, defaultMarkdownSerializer} from 'prosemirror-markdown'
-import {EditorState} from 'prosemirror-state'
-import {EditorView} from 'prosemirror-view'
+const { exampleSetup } = require('prosemirror-example-setup')
+const { schema, defaultMarkdownParser, defaultMarkdownSerializer } = require('prosemirror-markdown')
+const { EditorState } = require('prosemirror-state')
+const { EditorView } = require('prosemirror-view')
 
 class Editor {
   constructor(target, content) {
@@ -16,14 +16,14 @@ class Editor {
   get content() {
     return defaultMarkdownSerializer.serialize(this.view.state.doc)
   }
-  
-  focus() { 
-    this.view.focus() 
+
+  focus() {
+    this.view.focus()
   }
-  
-  destroy() { 
-    this.view.destroy() 
+
+  destroy() {
+    this.view.destroy()
   }
 }
 
-export default Editor
+module.exports = { Editor }
