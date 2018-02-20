@@ -5,12 +5,12 @@ const { EditorView } = require('prosemirror-view')
 
 class Editor {
   constructor(target, content) {
-    this.view = new EditorView(target, {
-      state: EditorState.create({
-        doc: defaultMarkdownParser.parse(content),
-        plugins: exampleSetup({schema})
-      })
+    const state = EditorState.create({
+      doc: defaultMarkdownParser.parse(content),
+      plugins: exampleSetup({ schema })
     })
+
+    this.view = new EditorView(target, { state })
   }
 
   get content() {
