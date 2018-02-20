@@ -3,7 +3,7 @@ import {schema, defaultMarkdownParser, defaultMarkdownSerializer} from 'prosemir
 import {EditorState} from 'prosemirror-state'
 import {EditorView} from 'prosemirror-view'
 
-export class Editor {
+class Editor {
   constructor(target, content) {
     this.view = new EditorView(target, {
       state: EditorState.create({
@@ -25,3 +25,5 @@ export class Editor {
     this.view.destroy() 
   }
 }
+
+export default Editor
